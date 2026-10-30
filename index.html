@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>QuizMe — Make study time count</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="builder.css">
+  <link rel="stylesheet" href="tutor.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="QuizMe home"><span class="brand-mark">Q</span><span>Quiz<span class="brand-light">Me</span></span></a>
+      <div class="side-label">YOUR SPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span>Home</button>
+        <button class="nav-item" data-view="library"><span class="nav-icon">▤</span>My study sets</button>
+      </nav>
+      <div class="side-label set-label">YOUR STUDY SETS <button id="side-add" class="tiny-add" aria-label="Create a study set">+</button></div>
+      <div id="side-sets" class="side-sets"></div>
+      <div class="sidebar-bottom"><div class="tip-icon">✦</div><p><strong>Small steps add up.</strong><br>Every card you review is progress.</p></div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar"><div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong id="crumb-current">Home</strong></div><div class="profile"><span class="profile-dot">O</span><span>Oliver</span><span class="chevron">⌄</span></div></header>
+      <div id="content" class="content"></div>
+    </main>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <button id="tutor-launch" class="tutor-launch" type="button" aria-label="Open Pip, your study coach" aria-expanded="false">
+    <span class="groundhog-avatar" aria-hidden="true"><svg viewBox="0 0 72 72"><ellipse cx="36" cy="42" rx="25" ry="24" fill="#9b6744"/><ellipse cx="19" cy="21" rx="9" ry="12" fill="#9b6744"/><ellipse cx="19" cy="22" rx="4" ry="6" fill="#d9a47d"/><ellipse cx="53" cy="21" rx="9" ry="12" fill="#9b6744"/><ellipse cx="53" cy="22" rx="4" ry="6" fill="#d9a47d"/><ellipse cx="36" cy="34" rx="21" ry="19" fill="#b98058"/><ellipse cx="28" cy="32" rx="2.8" ry="3.5" fill="#24352b"/><ellipse cx="44" cy="32" rx="2.8" ry="3.5" fill="#24352b"/><ellipse cx="36" cy="40" rx="10" ry="7" fill="#f1d6b9"/><ellipse cx="36" cy="37" rx="3.2" ry="2.4" fill="#563b31"/><path d="M33 42q3 3 6 0" fill="none" stroke="#68483a" stroke-width="1.6" stroke-linecap="round"/><path d="M17 53q19 12 38 0" fill="none" stroke="#805437" stroke-width="3" stroke-linecap="round"/></svg></span>
+    <span class="tutor-launch-label">Ask Pip</span><span class="tutor-sparkle">✦</span>
+  </button>
+  <section id="tutor-panel" class="tutor-panel hidden" aria-label="Pip study coach" aria-live="polite">
+    <header class="tutor-header"><span class="groundhog-avatar small" aria-hidden="true"><svg viewBox="0 0 72 72"><ellipse cx="36" cy="42" rx="25" ry="24" fill="#9b6744"/><ellipse cx="19" cy="21" rx="9" ry="12" fill="#9b6744"/><ellipse cx="19" cy="22" rx="4" ry="6" fill="#d9a47d"/><ellipse cx="53" cy="21" rx="9" ry="12" fill="#9b6744"/><ellipse cx="53" cy="22" rx="4" ry="6" fill="#d9a47d"/><ellipse cx="36" cy="34" rx="21" ry="19" fill="#b98058"/><ellipse cx="28" cy="32" rx="2.8" ry="3.5" fill="#24352b"/><ellipse cx="44" cy="32" rx="2.8" ry="3.5" fill="#24352b"/><ellipse cx="36" cy="40" rx="10" ry="7" fill="#f1d6b9"/><ellipse cx="36" cy="37" rx="3.2" ry="2.4" fill="#563b31"/><path d="M33 42q3 3 6 0" fill="none" stroke="#68483a" stroke-width="1.6" stroke-linecap="round"/><path d="M17 53q19 12 38 0" fill="none" stroke="#805437" stroke-width="3" stroke-linecap="round"/></svg></span><div class="tutor-heading"><strong>Pip <span>Study Coach</span></strong><small>Here to help you keep learning</small></div><button class="tutor-close" id="tutor-close" type="button" aria-label="Close study coach">×</button></header>
+    <div id="tutor-messages" class="tutor-messages"></div>
+    <div class="tutor-quick-actions"><button type="button" data-pip-action="plan">Study plan</button><button type="button" data-pip-action="review">Review weak spots</button><button type="button" data-pip-action="quiz">Quiz me</button><button type="button" data-pip-action="goal">Set weekly goal</button></div>
+    <form id="tutor-form" class="tutor-form"><input id="tutor-input" type="text" maxlength="300" autocomplete="off" placeholder="Ask about a topic or your study plan…" aria-label="Ask Pip a question"><button type="submit" aria-label="Send message">↑</button></form>
+    <div class="tutor-footnote">Pip uses your saved study sets and progress on this device. No AI service is connected.</div>
+  </section>
+</body>
+</html>
