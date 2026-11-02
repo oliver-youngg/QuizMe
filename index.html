@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="builder.css">
-  <link rel="stylesheet" href="tutor.css">
+  <script src="starter-data.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -34,16 +34,8 @@
   </div>
   <div id="modal-root"></div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <button id="tutor-launch" class="tutor-launch" type="button" aria-label="Open Pip, your study coach" aria-expanded="false">
-    <span class="groundhog-avatar" aria-hidden="true"><svg viewBox="0 0 72 72"><ellipse cx="36" cy="42" rx="25" ry="24" fill="#9b6744"/><ellipse cx="19" cy="21" rx="9" ry="12" fill="#9b6744"/><ellipse cx="19" cy="22" rx="4" ry="6" fill="#d9a47d"/><ellipse cx="53" cy="21" rx="9" ry="12" fill="#9b6744"/><ellipse cx="53" cy="22" rx="4" ry="6" fill="#d9a47d"/><ellipse cx="36" cy="34" rx="21" ry="19" fill="#b98058"/><ellipse cx="28" cy="32" rx="2.8" ry="3.5" fill="#24352b"/><ellipse cx="44" cy="32" rx="2.8" ry="3.5" fill="#24352b"/><ellipse cx="36" cy="40" rx="10" ry="7" fill="#f1d6b9"/><ellipse cx="36" cy="37" rx="3.2" ry="2.4" fill="#563b31"/><path d="M33 42q3 3 6 0" fill="none" stroke="#68483a" stroke-width="1.6" stroke-linecap="round"/><path d="M17 53q19 12 38 0" fill="none" stroke="#805437" stroke-width="3" stroke-linecap="round"/></svg></span>
-    <span class="tutor-launch-label">Ask Pip</span><span class="tutor-sparkle">✦</span>
+  <button id="free-flight-launch" class="free-flight-launch" type="button" aria-label="Open Free Flight sandbox" title="Free Flight sandbox">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 27c7-1 12-5 16-13 2 5 6 8 14 9l7 2-7 3c-5 2-9 4-13 10l-3-8-14-3Z" fill="currentColor"/><circle cx="34" cy="22" r="1.5" fill="#fffefa"/><path d="m21 26 9 1-8 3" fill="none" stroke="#fffefa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
-  <section id="tutor-panel" class="tutor-panel hidden" aria-label="Pip study coach" aria-live="polite">
-    <header class="tutor-header"><span class="groundhog-avatar small" aria-hidden="true"><svg viewBox="0 0 72 72"><ellipse cx="36" cy="42" rx="25" ry="24" fill="#9b6744"/><ellipse cx="19" cy="21" rx="9" ry="12" fill="#9b6744"/><ellipse cx="19" cy="22" rx="4" ry="6" fill="#d9a47d"/><ellipse cx="53" cy="21" rx="9" ry="12" fill="#9b6744"/><ellipse cx="53" cy="22" rx="4" ry="6" fill="#d9a47d"/><ellipse cx="36" cy="34" rx="21" ry="19" fill="#b98058"/><ellipse cx="28" cy="32" rx="2.8" ry="3.5" fill="#24352b"/><ellipse cx="44" cy="32" rx="2.8" ry="3.5" fill="#24352b"/><ellipse cx="36" cy="40" rx="10" ry="7" fill="#f1d6b9"/><ellipse cx="36" cy="37" rx="3.2" ry="2.4" fill="#563b31"/><path d="M33 42q3 3 6 0" fill="none" stroke="#68483a" stroke-width="1.6" stroke-linecap="round"/><path d="M17 53q19 12 38 0" fill="none" stroke="#805437" stroke-width="3" stroke-linecap="round"/></svg></span><div class="tutor-heading"><strong>Pip <span>Study Coach</span></strong><small>Here to help you keep learning</small></div><button class="tutor-close" id="tutor-close" type="button" aria-label="Close study coach">×</button></header>
-    <div id="tutor-messages" class="tutor-messages"></div>
-    <div class="tutor-quick-actions"><button type="button" data-pip-action="plan">Study plan</button><button type="button" data-pip-action="review">Review weak spots</button><button type="button" data-pip-action="quiz">Quiz me</button><button type="button" data-pip-action="goal">Set weekly goal</button></div>
-    <form id="tutor-form" class="tutor-form"><input id="tutor-input" type="text" maxlength="300" autocomplete="off" placeholder="Ask about a topic or your study plan…" aria-label="Ask Pip a question"><button type="submit" aria-label="Send message">↑</button></form>
-    <div class="tutor-footnote">Pip uses your saved study sets and progress on this device. No AI service is connected.</div>
-  </section>
 </body>
 </html>
